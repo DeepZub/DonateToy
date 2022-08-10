@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/home_page_nav"
+    app:startDestination="@id/listAdFragment">
+
+    <fragment
+        android:id="@+id/listAdFragment"
+        android:name="com.example.donatetoy.ListAdFragment"
+        android:label="fragment_list_ad"
+        tools:layout="@layout/fragment_list_ad" />
+    <activity
+        android:id="@+id/createAdActivity"
+        android:name="com.example.donatetoy.CreateAdActivity"
+        android:label="CreateAdActivity"
+        tools:layout="@layout/activity_create_ad"/>
+    <activity
+        android:id="@+id/FriendsActivity"
+        android:name="com.example.donatetoy.friendView.FriendsActivity"
+        android:label="FriendsActivity"
+        tools:layout="@layout/activity_friends"/>
+    <include app:graph="@navigation/main_nav" />
+    <activity
+        android:id="@+id/homePageActivity"
+        android:name="com.example.donatetoy.HomePageActivity"
+        android:label="HomePageActivity" />
+</navigation>

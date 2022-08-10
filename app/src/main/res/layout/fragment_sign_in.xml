@@ -1,0 +1,137 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+    
+    <data>
+        <variable name="viewModel" type="com.example.donatetoy.authViewModel.SignInViewModel" />
+        <variable name="fragment" type="com.example.donatetoy.authView.SignInFragment" />
+        <variable name="checkBoxChecked" type="boolean" />
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/backGround"
+        tools:context=".authView.SignInFragment">
+
+        <EditText
+            android:id="@+id/editTextEmail"
+            android:layout_width="370dp"
+            android:layout_height="50dp"
+            android:background="@drawable/edittext_design"
+            android:drawableLeft="@drawable/email"
+            android:ems="10"
+            android:hint="@string/email"
+            android:inputType="textEmailAddress"
+            android:text="@={viewModel.userEmail}"
+            android:textColorHint="@color/black"
+            app:layout_constraintBottom_toTopOf="@+id/editTextPassword"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/textView2" />
+
+        <EditText
+            android:id="@+id/editTextPassword"
+            android:layout_width="370dp"
+            android:layout_height="50dp"
+            android:background="@drawable/edittext_design"
+            android:drawableLeft="@drawable/password"
+            android:ems="10"
+            android:hint="@string/password"
+            android:inputType="textPassword"
+            android:text="@={viewModel.userPassword}"
+            android:textColorHint="@color/black"
+            app:layout_constraintBottom_toTopOf="@+id/editTextName"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/editTextEmail" />
+
+        <Button
+            android:id="@+id/buttonSignIn"
+            android:layout_width="300dp"
+            android:layout_height="50dp"
+            android:background="@drawable/button_design"
+            android:onClick="@{()-> viewModel.onSigninClicked()}"
+            android:text="@string/signUpButton"
+            android:textAlignment="center"
+            android:textSize="20sp"
+            android:textStyle="bold|italic"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/editTextSurname"
+            tools:toastMessage="@{viewModel.toastMessage}" />
+
+        <CheckBox
+            android:id="@+id/checkBoxPasswordShow"
+            android:layout_width="48dp"
+            android:layout_height="50dp"
+            android:button="@drawable/password_eye"
+            android:checked="@={checkBoxChecked}"
+            android:onCheckedChanged="@{() -> fragment.passwordEyeClick(checkBoxChecked)}"
+            app:layout_constraintEnd_toEndOf="@+id/editTextPassword"
+            app:layout_constraintTop_toTopOf="@+id/editTextPassword" />
+
+        <de.hdodenhof.circleimageview.CircleImageView
+            android:id="@+id/imageViewsign"
+            android:layout_width="174dp"
+            android:layout_height="116dp"
+            android:src="@drawable/logo"
+            app:layout_constraintBottom_toTopOf="@+id/textView2"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/textView2"
+            android:layout_width="137dp"
+            android:layout_height="31dp"
+            android:text="@string/signUpButton"
+            android:textAlignment="center"
+            android:textSize="20sp"
+            android:textStyle="bold|italic"
+            app:layout_constraintBottom_toTopOf="@+id/editTextEmail"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/imageViewsign" />
+
+        <EditText
+            android:id="@+id/editTextName"
+            android:layout_width="370dp"
+            android:layout_height="50dp"
+            android:background="@drawable/edittext_design"
+            android:ems="10"
+            android:hint="@string/name"
+            android:inputType="textPersonName"
+            android:text="@={viewModel.name}"
+            android:textColorHint="@color/black"
+            app:layout_constraintBottom_toTopOf="@+id/editTextSurname"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/editTextPassword" />
+
+        <EditText
+            android:id="@+id/editTextSurname"
+            android:layout_width="370dp"
+            android:layout_height="50dp"
+            android:background="@drawable/edittext_design"
+            android:ems="10"
+            android:hint="@string/surname"
+            android:inputType="textPersonName"
+            android:text="@={viewModel.surname}"
+            android:textColorHint="@color/black"
+            app:layout_constraintBottom_toTopOf="@+id/buttonSignIn"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/editTextName" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

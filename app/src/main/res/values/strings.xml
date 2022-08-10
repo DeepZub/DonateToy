@@ -1,0 +1,55 @@
+<resources>
+    <string name="app_name">Parent Meeting</string>
+
+    <string name="error">ERROR</string>
+    <string name="exit">EXIT</string>
+    <string name="checkConnection">Please check your internet connection!</string>
+
+    <string name="email">Email</string>
+    <string name="password">Password</string>
+    <string name="name">Name</string>
+    <string name="surname">Surname</string>
+    <string name="signUpButton">SIGN UP</string>
+    <string name="invalidMessage">Please enter a valid email and password!</string>
+    <string name="invalidMail">Please enter a valid email!</string>
+    <string name="requiredFieldsMessage">Please fill in the required fields!</string>
+    <string name="registerSuccess">Registration Successful!</string>
+    <string name="registerFail">Registration Failed!</string>
+    <string name="logInButton">LOG IN</string>
+    <string name="logOutButton">LOG OUT</string>
+    <string name="loginSucces">Login successful!</string>
+    <string name="incorrectFields">Email or password is incorrect</string>
+    <string name="senMailButton">Send Mail</string>
+    <string name="mailSentInfo">Mail sent!</string>
+    <string name="mailNotAvailable">Mail is not available in the system!</string>
+    <string name="invalidPassword">The password should be 6 characters at least!</string>
+    <string name="usedMail">This e-mail address is used!</string>
+
+    <string name="exitToast">Exit is in progress...</string>
+    <string name="successful">Successful!</string>
+
+    <string name="nightMode">Night Mode</string>
+
+    <string name="create">Create</string>
+    <string name="list">List</string>
+
+    <string name="addFriend">Add Friend</string>
+    <string name="myFriends">My Friends</string>
+    <string name="friendRequests">Friend requests</string>
+    <string name="sendRequest">Send Request</string>
+    <string name="sendRequestToast">Friend request sent!</string>
+    <string name="sureRejectToast">Press again if you are sure you want to decline the friend request</string>
+    <string name="sureAcceptToast">Press again if you are sure you want to accept the friend request</string>
+    <string name="cancelRequestToast">Friend request deleted!</string>
+
+    <string name="friends">Friends</string>
+    <string name="profile">Profile</string>
+
+    <string name="boy">Boy</string>
+    <string name="girl">Girl</string>
+    <string name="buttonApply">Apply</string>
+
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+</resources>

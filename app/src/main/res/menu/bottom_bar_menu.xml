@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<menu xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        android:id="@+id/createAdActivity"
+        android:icon="@drawable/create_ad"
+        android:title="@string/create" />
+    <item
+        android:id="@+id/listAdFragment"
+        android:icon="@drawable/view_list"
+        android:title="@string/list" />
+</menu>

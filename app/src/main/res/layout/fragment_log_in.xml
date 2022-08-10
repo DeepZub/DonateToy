@@ -1,0 +1,128 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+    <data>
+        <variable name="viewModel" type="com.example.donatetoy.authViewModel.LogInViewModel" />
+        <variable name="fragment" type="com.example.donatetoy.authView.LogInFragment" />
+        <variable name="checkBoxChecked" type="boolean"/>
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/backGround"
+        tools:context=".authView.LogInFragment">
+
+        <EditText
+            android:id="@+id/editTextLogEmail"
+            android:layout_width="370dp"
+            android:layout_height="50dp"
+            android:background="@drawable/edittext_design"
+            android:drawableLeft="@drawable/email"
+            android:ems="10"
+            android:hint="@string/email"
+            android:inputType="textEmailAddress"
+            android:text="@={viewModel.userEmail}"
+            android:textColorHint="@color/black"
+            app:layout_constraintBottom_toTopOf="@+id/editTextLogPassword"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/textView" />
+
+        <EditText
+            android:id="@+id/editTextLogPassword"
+            android:layout_width="370dp"
+            android:layout_height="50dp"
+            android:background="@drawable/edittext_design"
+            android:drawableLeft="@drawable/password"
+            android:ems="10"
+            android:hint="@string/password"
+            android:inputType="textPassword"
+            android:text="@={viewModel.userPassword}"
+            android:textColorHint="@color/black"
+            app:layout_constraintBottom_toTopOf="@+id/buttonLogIn"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/editTextLogEmail" />
+
+        <CheckBox
+            android:id="@+id/checkBoxLog"
+            android:layout_width="48dp"
+            android:layout_height="50dp"
+            android:button="@drawable/password_eye"
+            android:checked="@={checkBoxChecked}"
+            android:onCheckedChanged="@{() -> fragment.passwordEyeClick(checkBoxChecked)}"
+            app:layout_constraintEnd_toEndOf="@+id/editTextLogPassword"
+            app:layout_constraintTop_toTopOf="@+id/editTextLogPassword" />
+
+        <Button
+            android:id="@+id/buttonLogIn"
+            android:layout_width="300dp"
+            android:layout_height="50dp"
+            android:layout_marginStart="56dp"
+            android:background="@drawable/button_design"
+            android:onClick="@{(view)-> viewModel.onLoginClicked(view)}"
+            android:text="@string/logInButton"
+            android:textColor="@color/black"
+            android:textSize="20sp"
+            android:textStyle="bold|italic"
+            app:layout_constraintBottom_toTopOf="@+id/floatingActionButton"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/editTextLogPassword"
+            tools:toastMessage="@{viewModel.toastMessage}" />
+
+        <de.hdodenhof.circleimageview.CircleImageView
+            android:id="@+id/imageViewLog"
+            android:layout_width="174dp"
+            android:layout_height="116dp"
+            android:src="@drawable/logo"
+            app:layout_constraintBottom_toTopOf="@+id/textView"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <com.google.android.material.floatingactionbutton.FloatingActionButton
+            android:id="@+id/floatingActionButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="30dp"
+            android:backgroundTint="#FF9800"
+            android:clickable="true"
+            android:onClick="@{() -> fragment.fabClick(floatingActionButton)}"
+            android:src="@drawable/ic_baseline_add_24"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/buttonLogIn" />
+
+        <CheckBox
+            android:id="@+id/checkBoxForgotPassword"
+            android:layout_width="121dp"
+            android:layout_height="48dp"
+            android:button="@color/white"
+            android:onClick="@{() -> fragment.forgotPasswordClick(checkBoxForgotPassword)}"
+            android:text="Forgot Password?"
+            android:textAlignment="center"
+            android:textStyle="bold|italic"
+            app:layout_constraintEnd_toEndOf="@+id/editTextLogPassword"
+            app:layout_constraintTop_toBottomOf="@+id/editTextLogPassword" />
+
+        <TextView
+            android:id="@+id/textView"
+            android:layout_width="137dp"
+            android:layout_height="31dp"
+            android:text="@string/logInButton"
+            android:textAlignment="center"
+            android:textSize="20sp"
+            android:textStyle="bold|italic"
+            app:layout_constraintBottom_toTopOf="@+id/editTextLogEmail"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/imageViewLog" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

@@ -1,0 +1,48 @@
+{
+  "project_info": {
+    "project_number": "648777176086",
+    "firebase_url": "https://donatetoys-1997-default-rtdb.europe-west1.firebasedatabase.app",
+    "project_id": "donatetoys-1997",
+    "storage_bucket": "donatetoys-1997.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:648777176086:android:ff2e27d0217f73a83dd137",
+        "android_client_info": {
+          "package_name": "com.example.donatetoy"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "648777176086-hsreqmua0emidgoa83a7ct0np92mvt9l.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.donatetoy",
+            "certificate_hash": "88c71dbe29b797038d837ff54af26222a2e91125"
+          }
+        },
+        {
+          "client_id": "648777176086-odr6ro93iu5tjr28psj9bgacb8g2v1ej.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDQN4C0Lv8spxjcpCQLQozM36KCKaY0wGo"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "648777176086-odr6ro93iu5tjr28psj9bgacb8g2v1ej.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
